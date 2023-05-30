@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
   json_annotation:
 
-  wc_dart_v1: 0.0.1
+  wc_dart_v1: 0.0.2
   wc_dart_v2: 0.0.3
 
 dev_dependencies:
