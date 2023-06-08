@@ -94,8 +94,8 @@ class WCInterface {
             case v2.Eip155Methods.personalSign:
               final requestParams =
                   (eventData.params!.request.params as List).cast<String>();
-              final dataToSign = requestParams[1];
-              final address = requestParams[0];
+              final dataToSign = requestParams[0];
+              final address = requestParams[1];
               final message = EthereumSignMessageV2(
                 data: dataToSign,
                 address: address,
@@ -123,7 +123,7 @@ class WCInterface {
               final message = EthereumSignMessageV2(
                 data: dataToSign,
                 address: address,
-                type: SignType.typedMessageV1,
+                type: SignType.typedMessageV4,
               );
               onV2EthSignTypedData.call(eventData, session, message, _v2Client);
               break;
